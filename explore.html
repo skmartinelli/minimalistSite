@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TK5L6SWL4B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TK5L6SWL4B');
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exploratory coding page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"> home</a>
+    </header>
+    <h1> exploratory coding page (exploring forms mostly)</h1>
+    <button> this button currently works as intended.</button>
+
+
+    <p> select your favorite beverage from the list</p>
+    <select>
+        <optgroup label="Water">
+          <option>water</option>
+        </optgroup>
+        <optgroup label="Teas">
+          <option>Green tea</option>
+          <option>english breakfast tea</option>
+        </optgroup>
+        <optgroup label="Sodas">
+          <option>Diet coke</option>
+          <option>Dr pepper</option>
+          <option>Mountain dew?</option>
+        </optgroup>
+      </select>
+
+
+      <form>
+        <fieldset>
+          <legend>Choose your favorite guitar hero 3 song</legend>
+      
+          <input type="radio" id="Threes" name="song" value="T">
+          <label for="Threes">3's and 7's - QOTSA</label><br>
+      
+          <input type="radio" id="When" name="song" value="W">
+          <label for="When">When You Were Young- The Killers</label><br>
+      
+          <input type="radio" id="Miss" name="song" value="M" />
+          <label for="Miss">Miss Murder - AFI</label>
+        </fieldset>
+      </form>
+
+      <textarea rows ="8" cols = "16"> my favorite is 3's and 7's because the riff is fun and difficult. </textarea>
+      <p> exploring the world of forms</p>
+      <form action="" method="get" class="form-example">
+        <div class="nameForm">
+          <label for="name">what is your name? </label>
+          <input type="text" name="name">
+        </div>
+        <div class="sendForm">
+          <input type="submit" value="send!">
+        </div>
+      </form>
+      <p> guess what is my favorite video game</p>
+      <input list="videogames" name="videoGameChoice">
+<datalist id="videogames">
+    <option value="skyrim">
+    <option value="apex legends">
+    <option value="payday 2">
+    <option value="call of duty">
+    <option value="civilizatioin 5">
+</datalist>
+
+
+
+<p> maybe here i will figure out a way to see what bands are playing live today and update with javascript</p>
+
+<table id="bands">
+    <caption> bands playing today</caption>
+    <colgroup>
+        <col>
+        <col span="1" class="band">
+        <col span="2" class="details">
+    </colgroup>
+    <thead>
+      <tr>
+        <td>band</td>
+        <td>location</td>
+        <td> cost</td>
+      </tr>
+    </thead>
+    <tbody>
+      <th scope = "row"> harry styles</th>
+      <td> LA</td>
+      <td> far too much i imagine</td>  
+      <!-- update this section using javascipt -->
+    </tbody>
+  </table>
+
+
+  <!-- template for rows of table-->
+  <template id="bandRow">
+    <tr>
+      <td class="bandPlayingToday"></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </template>
+
+
+</body>
+</html>

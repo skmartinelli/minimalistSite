@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TK5L6SWL4B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TK5L6SWL4B');
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Dialogs</title>
+    <script type="text/javascript" src="DOMPurify-main/dist/purify.js"></script>
+
+    
+</head>
+<body>
+    <h1> Custom Dialogs</h1>
+    
+    <!-- Alert -->
+    <dialog id="alert">
+        <form method="dialog">
+          <p>
+            Alert pressed!
+          </p>
+          <div style = "text-align: center;">
+            <button id="alertOk">Ok</button>
+          </div>
+        </form>
+      </dialog>
+      
+        <button id="showAlert">Alert</button>
+      
+     
+
+    <!-- Confirm -->
+    <dialog id="confirm">
+        <form method="dialog">
+          <p>
+            Do you want to confirm this?
+          </p>
+          <div style = "text-align: center;">
+            <div>
+                <button value="false">Cancel</button>
+                <button id="confirmBtn" value="true">Confirm</button>
+              </div>
+          </div>
+        </form>
+      </dialog>
+        <button id="showConfirm">Confirm</button>
+  
+
+
+
+      <!-- Prompt -->
+    <dialog id="prompt">
+        <form method="dialog">
+          <p>
+            What is your name?
+          </p>
+          <div style = "text-align: center;">
+            <div>
+                <input type="text">
+
+              </div>
+          </div>
+        </form>
+      </dialog>
+        <button id="showPrompt">Prompt</button>
+      
+
+
+
+
+
+
+      <hr>
+      <output></output>
+      <promptOutput></promptOutput> 
+      
+
+</body>
+
+<!--customdialog script-->
+<script async type ="module" src="customdialog.js"></script>
+
+<!-- Prompt script -->
+<script>
+
+const showPrompt = document.getElementById('showPrompt');
+const prompt =  document.getElementById('prompt');
+const outputBox = document.querySelector('output');
+
+showPrompt.addEventListener('click', () => {
+    prompt.showModal();
+});
+prompt.addEventListener('close', () => {
+
+    let cleaned = DOMPurify.sanitize(prompt.returnValue);
+
+    outputBox.value = `Prompt result : ${cleaned}`;
+  });
+
+</script>
+
+</html>
