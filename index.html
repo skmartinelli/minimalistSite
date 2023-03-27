@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Open+Sans">
     <link rel="stylesheet" href="style.css">
+    <link rel="alternate stylesheet" type="text/css" href="style-dark.css" title="Alternate Styles">
+    <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Open+Sans">
+
+</head>
     <title>Sam Martinelli</title>
 </head>
 
@@ -26,6 +29,39 @@
         <li><a class="color-change" href="about.html"> about </a></li>
         <li><a href="portfolio.html"> portfolio </a></li>
         <li><a href="blog.html">blog </a></li>
+       
+       
+       
+       
+       
+        <label class="switch">
+            <input type="checkbox" onchange="toggleStylesheet()">
+            <span class="slider"></span>
+        </label>       
+       
+
+
+
+
+<script>
+function toggleStylesheet() {
+  var defaultStylesheet = document.getElementsByTagName('link')[0];
+  var alternateStylesheet = document.getElementsByTagName('link')[1];
+  
+  if (defaultStylesheet.disabled) {
+    defaultStylesheet.disabled = false;
+    alternateStylesheet.disabled = true;
+  } else {
+    defaultStylesheet.disabled = true;
+    alternateStylesheet.disabled = false;
+  }
+}
+// BUGGY ON LOCAL HOST... Test on web environment
+
+
+
+</script>
+
        <!-- <li> personal wiki</li>-->
        <!-- todo: make a blog. -->
     </ul>
