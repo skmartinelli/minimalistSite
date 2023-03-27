@@ -4,6 +4,7 @@
     /* border: solid 1px black; */
     font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
     background-color:#0F0F0F;
+    overscroll-behavior:none;
     
 }
 
