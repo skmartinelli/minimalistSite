@@ -29,9 +29,7 @@ img {
     animation-fill-mode: forwards;
     transition: all 1.3s;
 }
-img:hover{
-  height:450px;
-}
+
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
